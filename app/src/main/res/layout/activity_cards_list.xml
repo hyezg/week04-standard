@@ -6,13 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CardListActivity">
 
-    <ImageButton
-        android:layout_width="40dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+
 
     <TextView
         android:id="@+id/title"
@@ -25,6 +19,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/title"/>
 
     <TextView
         android:id="@+id/available"
@@ -44,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginTop="15dp"
-        android:text="돈 얼마인지 가져옴"
+        android:text="$"
         android:textColor="#5163BF"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -58,8 +60,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="35dp"
-        android:text="pleasdfasdfasdfasdfasdfasdfadsfasdflkaghdslfkjhaldskjfhladhfla
-        jdhsflkjahdflkjhadslfjhaljsdhflakjhdfljahsdlkfjhalkjsdfa"
+        android:text="please, select a card you are willing to do the money transfer with or add a new card using the plus button below"
         android:textColor="#878787"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"

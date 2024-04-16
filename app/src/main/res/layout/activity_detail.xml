@@ -16,6 +16,16 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_dName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="asdfasdf"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/dName"
+        app:layout_constraintTop_toTopOf="@id/dName"
+        app:layout_constraintBottom_toBottomOf="@id/dName" />
 
     <TextView
         android:id="@+id/dCardN"
@@ -27,6 +37,16 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dName" />
+    <TextView
+        android:id="@+id/tv_dCardN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="asdfasdf"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/dCardN"
+        app:layout_constraintTop_toTopOf="@id/dCardN"
+        app:layout_constraintBottom_toBottomOf="@id/dCardN" />
 
     <TextView
         android:id="@+id/dPeriod"
@@ -40,6 +60,17 @@
         app:layout_constraintTop_toBottomOf="@id/dCardN" />
 
     <TextView
+        android:id="@+id/tv_dPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="asdfasdf"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/dPeriod"
+        app:layout_constraintTop_toTopOf="@id/dPeriod"
+        app:layout_constraintBottom_toBottomOf="@id/dPeriod" />
+
+    <TextView
         android:id="@+id/dPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,5 +80,15 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dPeriod" />
+    <TextView
+        android:id="@+id/tv_dPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="asdfasdf"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/dPrice"
+        app:layout_constraintTop_toTopOf="@id/dPrice"
+        app:layout_constraintBottom_toBottomOf="@id/dPrice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
