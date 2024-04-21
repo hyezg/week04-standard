@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/item_balance" />
 
     <TextView
-        android:id="@+id/item_cardName"
+        android:id="@+id/item_cardType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -87,9 +87,10 @@
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_cardName" />
+        app:layout_constraintTop_toBottomOf="@id/item_cardType" />
 
     <TextView
+        android:id="@+id/item_cardManager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"

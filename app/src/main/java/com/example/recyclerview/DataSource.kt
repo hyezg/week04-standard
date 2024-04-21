@@ -15,10 +15,4 @@ class DataSource {
     fun getCardList(): List<Card> {
         return cardList()
     }
-
-    fun getCardForName(name: String): Card {
-        cardList().let { cards ->
-            return cards.first { it.name == name }
-        }
-    }
 }

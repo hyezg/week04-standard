@@ -7,7 +7,6 @@
     tools:context=".CardListActivity">
 
 
-
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -24,9 +23,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/title"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/available"
@@ -46,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginTop="15dp"
-        android:text="$"
+        android:text="$2,85,856.20"
         android:textColor="#5163BF"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -88,18 +87,20 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/selectCard">
+        app:layout_constraintTop_toBottomOf="@id/selectCard"
+        tools:listitem="@layout/item_blue_card">
 
 
     </androidx.recyclerview.widget.RecyclerView>
 
-
+ß
 </androidx.constraintlayout.widget.ConstraintLayout>

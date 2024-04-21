@@ -3,9 +3,11 @@ package com.example.recyclerview
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclerview.databinding.ActivityCardsListBinding
 
 class CardListActivity : AppCompatActivity() {
+
     private val binding: ActivityCardsListBinding by lazy {
         ActivityCardsListBinding.inflate(layoutInflater)
     }
@@ -14,13 +16,7 @@ class CardListActivity : AppCompatActivity() {
         CardsAdapter { card ->
             adapterOnClick(card)
             //onClick 코드 블록 실행
-            //detailactivity 에 넘기기
-
-            adapterOnClick(card)
-
-            //val bundle = Bundle()
-            //bundle.putString("key","value")
-
+            //detailactivity 에 넘기기\
         }
     }
 
@@ -30,20 +26,21 @@ class CardListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //DataSource 클래스의 인스턴스를 얻음
-        val dataSource = DataSource.getDataSource()
-        cardsAdapter.cardList = dataSource.getCardList()
+        val cardList = DataSource.getDataSource().getCardList()
+        cardsAdapter.cardList = cardList
 
         with(binding.recyclerView) {
             adapter = cardsAdapter
+            layoutManager = LinearLayoutManager(this@CardListActivity)
         }
     }
 
     private fun adapterOnClick(card: Card) {
         val intent = Intent(this, DetailActivity()::class.java)
-        intent.putExtra("CARD_NAME", card.name)
-        intent.putExtra("CARD_CARD_N", card.cardN)
-        intent.putExtra("CARD_PERIOD", card.period)
-        intent.putExtra("CARD_PRICE", card.price)
+        val bundle = Bundle().apply {
+            putParcelable(DetailActivity.EXTRA_CARD, card)
+        }
+        intent.putExtras(bundle)
         startActivity(intent)
     }
 

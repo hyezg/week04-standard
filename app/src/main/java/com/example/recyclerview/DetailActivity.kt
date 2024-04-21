@@ -15,16 +15,16 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_detail)
 
-        val intent = intent
-        val cardName = intent.extras?.getString(EXTRA_CARD) ?: ""
-        val cardData = DataSource.getDataSource().getCardForName(cardName)
+        var cardItem = intent.getParcelableExtra<Card>(EXTRA_CARD)
 
-        binding.tvDName.text = cardData.name
-        binding.tvDCardN.text = cardData.cardN
-        binding.tvDPeriod.text = cardData.period
-        binding.tvDPrice.text = cardData.price
+        binding.tvDName.text = cardItem!!.name
+        binding.dName.text = cardItem!!.name
+        binding.tvDPeriod.text = cardItem.period
+        binding.tvDCardN.text = cardItem.cardN
+        binding.tvDcardViewType.text = cardItem.cardViewType.name
 
     }
 }

@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="asdfasdf"
+        android:text="이름"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@id/dName"
         app:layout_constraintTop_toTopOf="@id/dName"
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="asdfasdf"
+        android:text="번호 번호"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@id/dCardN"
         app:layout_constraintTop_toTopOf="@id/dCardN"
@@ -64,31 +64,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="asdfasdf"
+        android:text="기간 기간"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@id/dPeriod"
         app:layout_constraintTop_toTopOf="@id/dPeriod"
         app:layout_constraintBottom_toBottomOf="@id/dPeriod" />
 
     <TextView
-        android:id="@+id/dPrice"
+        android:id="@+id/dCardViewType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:text="가격 : "
+        android:text="카드 뷰타입 : "
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dPeriod" />
     <TextView
-        android:id="@+id/tv_dPrice"
+        android:id="@+id/tv_dcard_view_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="asdfasdf"
+        android:text="뷰타입"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@id/dPrice"
-        app:layout_constraintTop_toTopOf="@id/dPrice"
-        app:layout_constraintBottom_toBottomOf="@id/dPrice" />
+        app:layout_constraintStart_toEndOf="@id/dCardViewType"
+        app:layout_constraintTop_toTopOf="@id/dCardViewType"
+        app:layout_constraintBottom_toBottomOf="@id/dCardViewType" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
