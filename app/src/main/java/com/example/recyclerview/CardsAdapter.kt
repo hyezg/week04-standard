@@ -39,8 +39,8 @@ class CardsAdapter(private val onClick: (Card) -> Unit) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardsAdapter.CardViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return when (viewType) {
-            BLUE -> {
-                val binding = CardItemBinding.inflate(inflater, parent, false)
+            MuiltiViewEnum.BLUE.viewtype -> {
+                val binding = CardItemBinding.inflate(LayoutInflater.from(parent.context), false)
                 BlueCardViewHolder(binding)
             }
 
@@ -96,7 +96,7 @@ class CardsAdapter(private val onClick: (Card) -> Unit) :
         }
     }
 
-    inner class OrangeCardViewHolder(private val binding: CardItem3Binding) :
+    inner class SkyblueCardViewHolder(private val binding: CardItem2Binding) :
         RecyclerView.ViewHolder(binding.root) {
         private var currentCard: Card? = null
         fun bind(card: Card) {
@@ -108,7 +108,7 @@ class CardsAdapter(private val onClick: (Card) -> Unit) :
         }
     }
 
-    inner class SkyblueCardViewHolder(private val binding: CardItem2Binding) :
+    inner class OrangeCardViewHolder(private val binding: CardItem3Binding) :
         RecyclerView.ViewHolder(binding.root) {
         private var currentCard: Card? = null
         fun bind(card: Card) {
