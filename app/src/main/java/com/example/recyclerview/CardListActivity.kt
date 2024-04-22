@@ -16,7 +16,7 @@ class CardListActivity : AppCompatActivity() {
         CardsAdapter { card ->
             adapterOnClick(card)
             //onClick 코드 블록 실행
-            //detailactivity 에 넘기기\
+            //detailactivity 에 넘기기
         }
     }
 

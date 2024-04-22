@@ -20,11 +20,10 @@ class DetailActivity : AppCompatActivity() {
 
         var cardItem = intent.getParcelableExtra<Card>(EXTRA_CARD)
 
-        binding.tvDName.text = cardItem!!.name
         binding.dName.text = cardItem!!.name
-        binding.tvDPeriod.text = cardItem.period
-        binding.tvDCardN.text = cardItem.cardN
-        binding.tvDcardViewType.text = cardItem.cardViewType.name
+        binding.dPeriod.text = cardItem.period
+        binding.dCardN.text = cardItem.cardN
+        binding.dCardViewType.text = cardItem.cardViewType.name
 
     }
 }
